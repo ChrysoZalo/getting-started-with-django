@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>First template</p>
+    <a href="/leads">Go back to leads</a>
+    <hr />
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    
 </body>
 </html>

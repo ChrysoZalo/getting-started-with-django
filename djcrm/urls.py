@@ -1,10 +1,10 @@
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from leads.views import HomePage
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePage)
+    path('leads/', include('leads.urls', namespace='leads'))
 ]
